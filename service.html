@@ -7,20 +7,26 @@
 <meta name="description" content="登録支援機関MINATOの支援内容。採用支援・就労支援・生活支援・定着支援まで、外国人材の受入れを一気通貫でサポートします。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="index.html" class="logo"><img src="logo.png" alt=""> MINATO</a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
     <nav class="nav">
       <a href="index.html">ホーム</a>
-      <a href="services.html">サービス</a>
       <a href="service.html" class="current">支援内容</a>
       <a href="for-companies.html">受入れ企業様へ</a>
-      <a href="company.html">会社案内</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="company.html">会社概要</a>
+        </div>
+      </div>      <a href="news.html">お知らせ</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
     <a href="contact.html" class="btn btn-nav">お問い合わせ</a>
@@ -82,10 +88,10 @@
       <p class="section-label">対応分野</p>
       <h2 class="section-title">対応している特定技能分野</h2>
       <p style="color:var(--text-soft); max-width:60ch; margin:0 0 28px;">
-        以下の分野に対応しています。記載のない分野についても、まずはご相談ください。
+        特定技能の全分野に対応しています。分野ごとの要件や手続きもご案内しますので、まずはご相談ください。
       </p>
       <dl class="info-list">
-        <div class="info-row"><dt>対応分野</dt><dd>介護 / ビルクリーニング / 建設 / 農業 / 自動車運送業</dd></div>
+        <div class="info-row"><dt>対応分野</dt><dd>特定技能の全分野<br><span class="field-note">対象となる分野の一覧は、<a href="https://www.moj.go.jp/isa/policies/ssw/sswfield.html" target="_blank" rel="noopener">出入国在留管理庁「分野別情報」（公式）</a>をご確認ください。</span></dd></div>
       </dl>
     </div>
   </section>
@@ -119,10 +125,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="logo logo-footer"><img src="logo.png" alt=""> MINATO</span>
+    <span class="logo logo-footer"><img src="logo.png" alt="MINATO"></span>
     <div class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a>
       <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.threads.net/@minato.group.hr" target="_blank" rel="noopener">Threads</a>
     </div>
     <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
   </div>

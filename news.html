@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お知らせ｜登録支援機関 MINATO</title>
+<meta name="description" content="登録支援機関MINATOからのお知らせ。毎月の更新情報や、外国人材の受入れに役立つ情報を掲載しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
+    <nav class="nav">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">支援内容</a>
+      <a href="for-companies.html">受入れ企業様へ</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="company.html">会社概要</a>
+        </div>
+      </div>      <a href="news.html" class="current">お知らせ</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="btn btn-nav">お問い合わせ</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero-sub">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">NEWS</p>
+      <h1>お知らせ</h1>
+      <p class="hero-lead">MINATOからの毎月の更新情報をお届けします。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <ul class="news-list" id="news-list"></ul>
+      <p class="news-empty" id="news-empty" hidden>現在、お知らせはありません。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="logo logo-footer"><img src="logo.png" alt="MINATO"></span>
+    <div class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
+  </div>
+</footer>
+
+<script src="news.js" charset="utf-8"></script>
+<script>
+(function () {
+  var list = document.getElementById("news-list");
+  var items = (typeof NEWS !== "undefined" ? NEWS.slice() : [])
+    .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+
+  if (!items.length) { document.getElementById("news-empty").hidden = false; return; }
+
+  items.forEach(function (n) {
+    var li = document.createElement("li");
+    li.className = "news-item";
+
+    var meta = document.createElement("div");
+    meta.className = "news-meta";
+    var d = document.createElement("time");
+    d.textContent = n.date.replace(/-/g, ".");
+    var c = document.createElement("span");
+    c.className = "news-cat";
+    c.textContent = n.category || "お知らせ";
+    meta.appendChild(d);
+    meta.appendChild(c);
+
+    var h = document.createElement("h2");
+    h.className = "news-title";
+    h.textContent = n.title;
+
+    var p = document.createElement("p");
+    p.className = "news-body";
+    p.textContent = n.body;
+
+    li.appendChild(meta);
+    li.appendChild(h);
+    li.appendChild(p);
+
+    if (n.link) {
+      var a = document.createElement("a");
+      a.className = "news-link";
+      a.href = n.link;
+      a.textContent = "詳しく見る →";
+      li.appendChild(a);
+    }
+    list.appendChild(li);
+  });
+})();
+</script>
+
+</body>
+</html>

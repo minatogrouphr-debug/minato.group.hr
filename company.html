@@ -7,20 +7,26 @@
 <meta name="description" content="登録支援機関MINATOの会社概要とメンバー紹介。通訳を介さない直接コミュニケーションを大切にしています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="index.html" class="logo"><img src="logo.png" alt=""> MINATO</a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
     <nav class="nav">
       <a href="index.html">ホーム</a>
-      <a href="services.html">サービス</a>
       <a href="service.html">支援内容</a>
       <a href="for-companies.html">受入れ企業様へ</a>
-      <a href="company.html" class="current">会社案内</a>
+      <div class="nav-item has-sub current">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="company.html" class="current">会社概要</a>
+        </div>
+      </div>      <a href="news.html">お知らせ</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
     <a href="contact.html" class="btn btn-nav">お問い合わせ</a>
@@ -31,49 +37,47 @@
 
   <section class="hero hero-sub">
     <div class="wrap hero-inner">
-      <p class="eyebrow">会社案内</p>
-      <h1>夫婦二人三脚で、<br>一人ひとりと直接向き合う。</h1>
+      <p class="eyebrow">COMPANY</p>
+      <h1>会社案内</h1>
       <p class="hero-lead">
-        登録支援機関 MINATOの会社概要とメンバーをご紹介します。
+        登録支援機関 MINATOの会社概要をご紹介します。
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="team">
-        <p class="team-lead">通訳を介さず、直接のコミュニケーションを大切にしています。</p>
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="avatar">NT</div>
-            <p class="team-name">NGUYEN THANH TUNG</p>
-            <p class="team-role">共同代表</p>
-          </div>
-          <div class="team-card">
-            <img class="avatar-photo" src="team-nakahara.jpg" alt="中原彩乃未">
-            <p class="team-name">中原彩乃未</p>
-            <p class="team-role">共同代表</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="wrap">
       <p class="section-label">会社概要</p>
-      <h2 class="section-title">MINATOについて</h2>
       <dl class="info-list">
-        <div class="info-row"><dt>屋号</dt><dd>登録支援機関 MINATO</dd></div>
-        <div class="info-row"><dt>共同代表</dt><dd>NGUYEN THANH TUNG / 中原彩乃未</dd></div>
+        <div class="info-row info-row-full"><dd>登録支援機関 MINATO</dd></div>
+        <div class="info-row"><dt>代表</dt><dd>NGUYEN THANH TUNG</dd></div>
         <div class="info-row"><dt>登録支援機関登録番号</dt><dd>25登-011435</dd></div>
-        <div class="info-row"><dt>対応分野</dt><dd>介護 / ビルクリーニング / 建設 / 農業 / 自動車運送業</dd></div>
+        <div class="info-row"><dt>対応分野</dt><dd>特定技能の全分野（<a href="https://www.moj.go.jp/isa/policies/ssw/sswfield.html" target="_blank" rel="noopener">公式の分野一覧</a>）</dd></div>
         <div class="info-row"><dt>所在地</dt><dd>兵庫県神戸市長田区菅原通2丁目105-1 403</dd></div>
         <div class="info-row"><dt>電話番号</dt><dd><a href="tel:08061905084">080-6190-5084</a></dd></div>
       </dl>
     </div>
   </section>
 
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="team" style="margin-top:0; padding-top:0; border-top:none;">
+        <p class="team-lead">通訳を介さず、直接のコミュニケーションを大切にしています。</p>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="avatar">NT</div>
+            <p class="team-name">NGUYEN THANH TUNG</p>
+            <p class="team-role">代表</p>
+          </div>
+          <div class="team-card">
+            <img class="avatar-photo" src="team-nakahara.jpg" alt="中原彩乃未">
+            <p class="team-name">中原彩乃未</p>
+            <p class="team-role">パートナー</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section page-cta">
     <div class="wrap">
       <p class="section-label">お問い合わせ</p>
@@ -86,10 +90,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="logo logo-footer"><img src="logo.png" alt=""> MINATO</span>
+    <span class="logo logo-footer"><img src="logo.png" alt="MINATO"></span>
     <div class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a>
       <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.threads.net/@minato.group.hr" target="_blank" rel="noopener">Threads</a>
     </div>
     <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
   </div>

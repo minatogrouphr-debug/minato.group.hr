@@ -7,20 +7,26 @@
 <meta name="description" content="登録支援機関 MINATO。通訳を介さない直接コミュニケーションで、外国人材の採用支援から就労・生活・定着までを一気通貫でサポートします。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="index.html" class="logo"><img src="logo.png" alt=""> MINATO</a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
     <nav class="nav">
       <a href="index.html" class="current">ホーム</a>
-      <a href="services.html">サービス</a>
       <a href="service.html">支援内容</a>
       <a href="for-companies.html">受入れ企業様へ</a>
-      <a href="company.html">会社案内</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="company.html">会社概要</a>
+        </div>
+      </div>      <a href="news.html">お知らせ</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
     <a href="contact.html" class="btn btn-nav">お問い合わせ</a>
@@ -32,15 +38,35 @@
   <section id="top" class="hero">
     <div class="wrap hero-inner">
       <p class="eyebrow">登録支援機関 MINATO</p>
-      <h1>MINATOは、外国人材と受入れ企業、<br>双方の「人」に向き合う。</h1>
+      <h1>通訳を介さず、直接。<br>採用から定着まで、確かな支援を。</h1>
       <p class="hero-lead">
-        支援がうまくいっている、とは外国人材が仕事を続けていることではない。その人が、私生活も含めて人生を楽しんでいること。<br><br>
-        受入れ企業にとっての「採用してよかった」も、人手が足りているという状態ではない。実際に喜びや前向きな変化を感じられていること。<br><br>
-        MINATOに関わったすべての人が、「MINATOに任せてよかった」と言える会社であり続ける。
+        外国人材の採用支援から、就労・生活・定着まで。<br>
+        企業にとっても、外国人材にとっても「続けたい」と思える関係づくりを、確かな実績で支えます。
       </p>
       <div class="hero-cta">
         <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
         <a href="https://www.instagram.com/minato.group.hr/" class="btn btn-ghost" target="_blank" rel="noopener">Instagramを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="実績">
+    <div class="wrap stats-grid">
+      <div class="stat">
+        <p class="stat-num">600<span>名以上</span></p>
+        <p class="stat-label">支援してきた外国人材</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num stat-text">合格実績あり</p>
+        <p class="stat-label">特定技能1号・2号 試験</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num">10<span>%以下</span></p>
+        <p class="stat-label">入社3年後の離職率</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num stat-text">全分野対応</p>
+        <p class="stat-label">特定技能</p>
       </div>
     </div>
   </section>
@@ -109,18 +135,6 @@
 
   <section class="section">
     <div class="wrap">
-      <p class="section-label">サービス</p>
-      <h2 class="section-title">採用の前後を、幅広い事業でつなぐ</h2>
-      <p style="color:var(--text-soft); max-width:60ch; margin:0 0 28px;">
-        外国人教育支援プロジェクト、送り出し機関・日本語教育機関との連携、
-        特定技能生の採用支援、登録支援機関業務委託、外国人雇用コンサルティングをご提供しています。
-      </p>
-      <a href="services.html" class="btn btn-ghost">サービス一覧を見る</a>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="wrap">
       <p class="section-label">受入れ企業様へ</p>
       <h2 class="section-title">外国人材の受入れをお考えの企業様へ</h2>
       <p style="color:var(--text-soft); max-width:60ch; margin:0 0 28px;">
@@ -128,6 +142,15 @@
         まずは現在のお悩みやご希望をお聞かせください。
       </p>
       <a href="for-companies.html" class="btn btn-ghost">受入れ企業様向けページを見る</a>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="news">
+    <div class="wrap">
+      <p class="section-label">お知らせ</p>
+      <h2 class="section-title">最新のお知らせ</h2>
+      <ul class="news-list news-top" id="news-top-list"></ul>
+      <p class="news-top-more"><a href="news.html">お知らせ一覧を見る &rarr;</a></p>
     </div>
   </section>
 
@@ -139,7 +162,7 @@
         外国人材の採用・受入れについてのご相談は、お気軽にご連絡ください。
       </p>
       <div class="contact-links">
-        <a href="mailto:minato.group.hr@gmail.com" class="btn btn-primary">メールで問い合わせる</a>
+        <a href="mailto:info@minato-shien.com" class="btn btn-primary">メールで問い合わせる</a>
         <a href="https://www.instagram.com/minato.group.hr/" class="btn btn-ghost" target="_blank" rel="noopener">Instagram DM</a>
       </div>
     </div>
@@ -149,14 +172,39 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="logo logo-footer"><img src="logo.png" alt=""> MINATO</span>
+    <span class="logo logo-footer"><img src="logo.png" alt="MINATO"></span>
     <div class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a>
       <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.threads.net/@minato.group.hr" target="_blank" rel="noopener">Threads</a>
     </div>
     <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
   </div>
 </footer>
+
+<script src="news.js" charset="utf-8"></script>
+<script>
+(function () {
+  var list = document.getElementById("news-top-list");
+  if (!list || typeof NEWS === "undefined") return;
+  NEWS.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3).forEach(function (n) {
+    var li = document.createElement("li");
+    li.className = "news-item";
+    var meta = document.createElement("div");
+    meta.className = "news-meta";
+    var d = document.createElement("time");
+    d.textContent = n.date.replace(/-/g, ".");
+    var c = document.createElement("span");
+    c.className = "news-cat";
+    c.textContent = n.category || "お知らせ";
+    meta.appendChild(d); meta.appendChild(c);
+    var h = document.createElement("h3");
+    h.className = "news-title";
+    h.textContent = n.title;
+    li.appendChild(meta); li.appendChild(h);
+    list.appendChild(li);
+  });
+})();
+</script>
 
 </body>
 </html>

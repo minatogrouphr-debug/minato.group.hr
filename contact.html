@@ -7,20 +7,26 @@
 <meta name="description" content="登録支援機関MINATOへのお問い合わせ。外国人材の採用・受入れについて、お気軽にご連絡ください。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="index.html" class="logo"><img src="logo.png" alt=""> MINATO</a>
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
     <nav class="nav">
       <a href="index.html">ホーム</a>
-      <a href="services.html">サービス</a>
       <a href="service.html">支援内容</a>
       <a href="for-companies.html">受入れ企業様へ</a>
-      <a href="company.html">会社案内</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">企業理念</a>
+          <a href="company.html">会社概要</a>
+        </div>
+      </div>      <a href="news.html">お知らせ</a>
       <a href="contact.html" class="current">お問い合わせ</a>
     </nav>
     <a href="contact.html" class="btn btn-nav">お問い合わせ</a>
@@ -38,20 +44,87 @@
         内容を確認のうえ、こちらからご返信いたします。
       </p>
       <div class="contact-links">
-        <a href="mailto:minato.group.hr@gmail.com" class="btn btn-primary">メールで問い合わせる</a>
+        <a href="mailto:info@minato-shien.com" class="btn btn-primary">メールで問い合わせる</a>
         <a href="https://www.instagram.com/minato.group.hr/" class="btn btn-ghost" target="_blank" rel="noopener">Instagram DM</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="form">
+    <div class="wrap">
+      <p class="section-label">お問い合わせフォーム</p>
+      <h2 class="section-title">フォームから問い合わせる</h2>
+
+      <form id="contact-form" class="form" novalidate>
+        <input type="hidden" name="_subject" value="【MINATO HP】お問い合わせがありました">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+        <div class="form-row">
+          <label for="f-type">お問い合わせの種類<span class="req">必須</span></label>
+          <select id="f-type" name="type" required>
+            <option value="">選択してください</option>
+            <option>外国人材の受入れについて（企業様）</option>
+            <option>支援内容・費用について</option>
+            <option>登録支援機関の変更について</option>
+            <option>外国人本人からのご相談</option>
+            <option>その他</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="f-name">お名前<span class="req">必須</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form-row">
+          <label for="f-company">会社名・団体名<span class="opt">任意</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization">
+        </div>
+
+        <div class="form-row">
+          <label for="f-email">メールアドレス<span class="req">必須</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+
+        <div class="form-row">
+          <label for="f-phone">電話番号<span class="opt">任意</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+
+        <div class="form-row">
+          <label for="f-message">お問い合わせ内容<span class="req">必須</span></label>
+          <textarea id="f-message" name="message" rows="7" required></textarea>
+        </div>
+
+        <div class="form-agree">
+          <label>
+            <input type="checkbox" name="agree" value="同意する" required>
+            <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します</span>
+          </label>
+        </div>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-primary form-submit" id="form-submit">送信する</button>
+      </form>
+
+      <div class="form-result" id="form-result" role="status" hidden>
+        <h3>送信ありがとうございました</h3>
+        <p>お問い合わせを受け付けました。内容を確認のうえ、ご入力いただいたメールアドレス宛に、ご連絡いたします。</p>
+      </div>
+
+      <p class="form-fallback" id="form-fallback" hidden>
+        現在、フォームを準備中です。恐れ入りますが、上のメールまたはInstagram DMから、お問い合わせください。
+      </p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <dl class="info-list">
-        <div class="info-row"><dt>メール</dt><dd><a href="mailto:minato.group.hr@gmail.com">minato.group.hr@gmail.com</a></dd></div>
+        <div class="info-row"><dt>メール</dt><dd><a href="mailto:info@minato-shien.com">info@minato-shien.com</a></dd></div>
         <div class="info-row"><dt>電話番号</dt><dd><a href="tel:08061905084">080-6190-5084</a></dd></div>
         <div class="info-row"><dt>所在地</dt><dd>兵庫県神戸市長田区菅原通2丁目105-1 403</dd></div>
         <div class="info-row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">@minato.group.hr</a></dd></div>
-        <div class="info-row"><dt>Threads</dt><dd><a href="https://www.threads.net/@minato.group.hr" target="_blank" rel="noopener">@minato.group.hr</a></dd></div>
       </dl>
     </div>
   </section>
@@ -60,14 +133,63 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="logo logo-footer"><img src="logo.png" alt=""> MINATO</span>
+    <span class="logo logo-footer"><img src="logo.png" alt="MINATO"></span>
     <div class="footer-links">
       <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.threads.net/@minato.group.hr" target="_blank" rel="noopener">Threads</a>
     </div>
     <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  // ▼ Formspreeで作ったフォームのURLを、ここに貼り付けます（例: "https://formspree.io/f/abcdwxyz"）
+  var FORM_ENDPOINT = "https://formspree.io/f/XXXXXXXX";
+  // ▲
+
+  var form = document.getElementById("contact-form");
+  var errorBox = document.getElementById("form-error");
+  var resultBox = document.getElementById("form-result");
+  var btn = document.getElementById("form-submit");
+
+  if (FORM_ENDPOINT.indexOf("XXXXXXXX") !== -1) {
+    form.hidden = true;
+    document.getElementById("form-fallback").hidden = false;
+    return;
+  }
+
+  function showError(msg) { errorBox.textContent = msg; errorBox.hidden = false; }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    errorBox.hidden = true;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      showError("未入力の項目、または入力内容に誤りがあります。ご確認ください。");
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = "送信中…";
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function (res) {
+      if (res.ok) {
+        form.hidden = true;
+        resultBox.hidden = false;
+        resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        throw new Error("send failed");
+      }
+    }).catch(function () {
+      showError("送信できませんでした。お手数ですが、メールまたは電話でお問い合わせください。");
+      btn.disabled = false;
+      btn.textContent = "送信する";
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
