@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="研修の様子のイラスト">
+  <defs>
+    <symbol id="pm" viewBox="0 0 100 140">
+      <path d="M8 140V112a42 42 0 0 1 84 0V140z" fill="var(--cloth,#0b2545)"/>
+      <rect x="42" y="56" width="16" height="22" fill="var(--skin,#f2c9a5)"/>
+      <circle cx="50" cy="38" r="24" fill="var(--skin,#f2c9a5)"/>
+      <path d="M25 36a25 25 0 0 1 50 0q-12-12-25-10q-13-2-25 10z" fill="var(--hair,#1b2433)"/>
+      <circle cx="41" cy="40" r="2.4" fill="#1b2433"/><circle cx="59" cy="40" r="2.4" fill="#1b2433"/>
+      <path d="M40 49q10 9 20 0" fill="none" stroke="#1b2433" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="pf" viewBox="0 0 100 140">
+      <path d="M23 38a27 27 0 0 1 54 0v36H23z" fill="var(--hair,#1b2433)"/>
+      <path d="M8 140V112a42 42 0 0 1 84 0V140z" fill="var(--cloth,#0b2545)"/>
+      <rect x="42" y="56" width="16" height="22" fill="var(--skin,#f2c9a5)"/>
+      <circle cx="50" cy="38" r="23" fill="var(--skin,#f2c9a5)"/>
+      <path d="M27 36a23 23 0 0 1 46 0q-10-9-23-8q-13-1-23 8z" fill="var(--hair,#1b2433)"/>
+      <circle cx="41" cy="40" r="2.4" fill="#1b2433"/><circle cx="59" cy="40" r="2.4" fill="#1b2433"/>
+      <path d="M40 49q10 9 20 0" fill="none" stroke="#1b2433" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="#eef1f7"/>
+  <rect y="340" width="600" height="60" fill="#dfe5ef"/>
+  <!-- ホワイトボード -->
+  <rect x="40" y="30" width="310" height="165" rx="6" fill="#fff" stroke="#0b2545" stroke-width="6"/>
+  <rect x="70" y="140" width="34" height="38" fill="#0b2545"/>
+  <rect x="116" y="118" width="34" height="60" fill="#e5372b"/>
+  <rect x="162" y="96" width="34" height="82" fill="#1c3a63"/>
+  <rect x="208" y="70" width="34" height="108" fill="#e5372b"/>
+  <path d="M258 60h70M258 80h56M258 100h64" stroke="#c4ccda" stroke-width="6" stroke-linecap="round"/>
+  <path d="M70 178h180" stroke="#0b2545" stroke-width="3"/>
+  <!-- 講師 -->
+  <use href="#pm" x="385" y="188" width="100" height="140" style="--skin:#d9a077;--hair:#1b2433;--cloth:#e5372b"/>
+  <path d="M390 250L350 120" stroke="#8d5a3a" stroke-width="5" stroke-linecap="round"/>
+  <!-- 受講者 -->
+  <use href="#pf" x="45" y="204" width="90" height="126" style="--skin:#f2c9a5;--hair:#3a2a20;--cloth:#1c3a63"/>
+  <use href="#pm" x="150" y="204" width="90" height="126" style="--skin:#b97a52;--hair:#1b2433;--cloth:#7d8aa0"/>
+  <use href="#pf" x="255" y="204" width="90" height="126" style="--skin:#8d5a3a;--hair:#1b2433;--cloth:#e5372b"/>
+  <use href="#pm" x="500" y="204" width="90" height="126" style="--skin:#f2c9a5;--hair:#3a2a20;--cloth:#0b2545"/>
+  <!-- 机 -->
+  <rect x="20" y="328" width="560" height="18" rx="4" fill="#0b2545"/>
+  <rect x="60" y="346" width="10" height="44" fill="#1c3a63"/><rect x="530" y="346" width="10" height="44" fill="#1c3a63"/>
+  <rect x="70" y="316" width="50" height="12" rx="2" fill="#fff" stroke="#c4ccda"/>
+  <rect x="180" y="318" width="44" height="10" rx="2" fill="#fff" stroke="#c4ccda"/>
+  <rect x="285" y="316" width="50" height="12" rx="2" fill="#fff" stroke="#c4ccda"/>
+</svg>

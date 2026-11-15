@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お役立ち資料｜登録支援機関 MINATO</title>
+<meta name="description" content="外国人材の受入れに役立つ資料をご請求いただけます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
+    <nav class="nav" id="site-nav">
+      <div class="nav-item has-sub">
+        <a href="service.html">サービス内容</a>
+        <div class="nav-sub">
+          <a href="for-companies.html">受入れ企業様へ</a>
+        </div>
+      </div>
+      <a href="foreign-workers.html">外国人材について</a>
+      <a href="registered-support.html">登録支援機関</a>
+      <a href="flow.html">採用までの流れ</a>
+      <a href="news.html">お知らせ</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">企業理念</a>
+        </div>
+      </div>
+      <a href="materials.html" class="nav-mobile-only">お役立ち資料</a>
+    </nav>
+    <div class="header-btns">
+      <a href="contact.html" class="btn btn-primary btn-nav">お問い合わせ</a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero-sub hero-photo hero-care2">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">DOCUMENTS</p>
+      <h1>お役立ち資料</h1>
+      <p class="hero-lead">
+        外国人材の受入れに役立つ資料を、フォームからご請求いただけます。
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="form">
+    <div class="wrap">
+      <p class="section-label">資料請求フォーム</p>
+      <h2 class="section-title">資料を請求する</h2>
+
+      <form id="contact-form" class="form" novalidate>
+        <input type="hidden" name="_subject" value="【MINATO HP】資料請求がありました">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+        <div class="form-row">
+          <label for="f-name">お名前<span class="req">必須</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form-row">
+          <label for="f-company">会社名・団体名<span class="req">必須</span></label>
+          <input id="f-company" name="company" type="text" required autocomplete="organization">
+        </div>
+
+        <div class="form-row">
+          <label for="f-email">メールアドレス<span class="req">必須</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+
+        <div class="form-row">
+          <label for="f-phone">電話番号<span class="opt">任意</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+
+        <div class="form-row">
+          <label for="f-message">ご要望など<span class="opt">任意</span></label>
+          <textarea id="f-message" name="message" rows="5"></textarea>
+        </div>
+
+        <div class="form-agree">
+          <label>
+            <input type="checkbox" name="agree" value="同意する" required>
+            <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意します</span>
+          </label>
+        </div>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-primary form-submit" id="form-submit">資料を請求する</button>
+      </form>
+
+      <div class="form-result" id="form-result" role="status" hidden>
+        <h3>送信ありがとうございました</h3>
+        <p>資料のご請求を受け付けました。内容を確認のうえ、ご入力いただいたメールアドレス宛に、ご連絡いたします。</p>
+      </div>
+
+      <p class="form-fallback" id="form-fallback" hidden>
+        現在、フォームを準備中です。恐れ入りますが、<a href="mailto:info@minato-shien.com">info@minato-shien.com</a> までメールでご連絡ください。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="logo logo-footer"><img src="logo-footer.png" alt="MINATO"></span>
+    <div class="footer-links">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ▼ Formspreeで作った「資料請求用」フォームのURLを、ここに貼り付けます（例: "https://formspree.io/f/abcdwxyz"）
+  var FORM_ENDPOINT = "https://formspree.io/f/XXXXXXXX";
+  // ▲
+
+  var form = document.getElementById("contact-form");
+  var errorBox = document.getElementById("form-error");
+  var resultBox = document.getElementById("form-result");
+  var btn = document.getElementById("form-submit");
+
+  if (FORM_ENDPOINT.indexOf("XXXXXXXX") !== -1) {
+    form.hidden = true;
+    document.getElementById("form-fallback").hidden = false;
+    return;
+  }
+
+  function showError(msg) { errorBox.textContent = msg; errorBox.hidden = false; }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    errorBox.hidden = true;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      showError("未入力の項目、または入力内容に誤りがあります。ご確認ください。");
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = "送信中…";
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function (res) {
+      if (res.ok) {
+        form.hidden = true;
+        resultBox.hidden = false;
+        resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        throw new Error("send failed");
+      }
+    }).catch(function () {
+      showError("送信できませんでした。お手数ですが、メールでご連絡ください。");
+      btn.disabled = false;
+      btn.textContent = "資料を請求する";
+    });
+  });
+})();
+</script>
+
+<script src="menu.js"></script>
+</body>
+</html>

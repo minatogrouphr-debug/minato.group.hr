@@ -15,27 +15,36 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
-    <nav class="nav">
-      <a href="index.html" class="current">ホーム</a>
-      <a href="service.html">支援内容</a>
-      <a href="for-companies.html">受入れ企業様へ</a>
+    <nav class="nav" id="site-nav">
+      <div class="nav-item has-sub">
+        <a href="service.html">サービス内容</a>
+        <div class="nav-sub">
+          <a href="for-companies.html">受入れ企業様へ</a>
+        </div>
+      </div>
+      <a href="foreign-workers.html">外国人材について</a>
+      <a href="registered-support.html">登録支援機関</a>
+      <a href="flow.html">採用までの流れ</a>
+      <a href="news.html">お知らせ</a>
       <div class="nav-item has-sub">
         <a href="company.html">会社案内</a>
         <div class="nav-sub">
           <a href="greeting.html">代表挨拶</a>
           <a href="philosophy.html">企業理念</a>
-          <a href="company.html">会社概要</a>
         </div>
-      </div>      <a href="news.html">お知らせ</a>
-      <a href="contact.html">お問い合わせ</a>
+      </div>
+      <a href="materials.html" class="nav-mobile-only">お役立ち資料</a>
     </nav>
-    <a href="contact.html" class="btn btn-nav">お問い合わせ</a>
+    <div class="header-btns">
+      <a href="contact.html" class="btn btn-primary btn-nav">お問い合わせ</a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <main>
 
-  <section id="top" class="hero">
+  <section id="top" class="hero hero-photo">
     <div class="wrap hero-inner">
       <p class="eyebrow">登録支援機関 MINATO</p>
       <h1>通訳を介さず、直接。<br>採用から定着まで、確かな支援を。</h1>
@@ -154,7 +163,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section section-contact">
+  <section id="contact" class="section section-contact contact-photo">
     <div class="wrap contact-inner">
       <p class="section-label">お問い合わせ</p>
       <h2 class="section-title">まずはお話をお聞かせください</h2>
@@ -172,7 +181,7 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="logo logo-footer"><img src="logo.png" alt="MINATO"></span>
+    <span class="logo logo-footer"><img src="logo-footer.png" alt="MINATO"></span>
     <div class="footer-links">
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
@@ -206,5 +215,6 @@
 })();
 </script>
 
+<script src="menu.js"></script>
 </body>
 </html>

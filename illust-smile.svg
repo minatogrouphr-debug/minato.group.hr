@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="さまざまな国の外国人材が笑顔で並ぶイラスト">
+  <defs>
+    <symbol id="pm" viewBox="0 0 100 140">
+      <path d="M8 140V112a42 42 0 0 1 84 0V140z" fill="var(--cloth,#0b2545)"/>
+      <rect x="42" y="56" width="16" height="22" fill="var(--skin,#f2c9a5)"/>
+      <circle cx="50" cy="38" r="24" fill="var(--skin,#f2c9a5)"/>
+      <path d="M25 36a25 25 0 0 1 50 0q-12-12-25-10q-13-2-25 10z" fill="var(--hair,#1b2433)"/>
+      <circle cx="41" cy="40" r="2.4" fill="#1b2433"/><circle cx="59" cy="40" r="2.4" fill="#1b2433"/>
+      <path d="M40 49q10 9 20 0" fill="none" stroke="#1b2433" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="pf" viewBox="0 0 100 140">
+      <path d="M23 38a27 27 0 0 1 54 0v36H23z" fill="var(--hair,#1b2433)"/>
+      <path d="M8 140V112a42 42 0 0 1 84 0V140z" fill="var(--cloth,#0b2545)"/>
+      <rect x="42" y="56" width="16" height="22" fill="var(--skin,#f2c9a5)"/>
+      <circle cx="50" cy="38" r="23" fill="var(--skin,#f2c9a5)"/>
+      <path d="M27 36a23 23 0 0 1 46 0q-10-9-23-8q-13-1-23 8z" fill="var(--hair,#1b2433)"/>
+      <circle cx="41" cy="40" r="2.4" fill="#1b2433"/><circle cx="59" cy="40" r="2.4" fill="#1b2433"/>
+      <path d="M40 49q10 9 20 0" fill="none" stroke="#1b2433" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <rect width="600" height="400" rx="12" fill="#eef1f7"/>
+  <circle cx="300" cy="215" r="170" fill="#fff"/>
+  <circle cx="300" cy="215" r="170" fill="none" stroke="#e5372b" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <!-- 吹き出し -->
+  <g font-family="'Noto Sans JP','Yu Gothic',sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="30" y="50" width="120" height="40" rx="20" fill="#e5372b"/><path d="M80 90l10 14 8-14z" fill="#e5372b"/>
+    <text x="90" y="76" fill="#fff">Xin chào</text>
+    <rect x="450" y="40" width="130" height="40" rx="20" fill="#0b2545"/><path d="M500 80l-6 16 16-14z" fill="#0b2545"/>
+    <text x="515" y="66" fill="#fff">Terima kasih</text>
+    <rect x="235" y="22" width="130" height="40" rx="20" fill="#1c3a63"/><path d="M290 62l8 14 6-14z" fill="#1c3a63"/>
+    <text x="300" y="48" fill="#fff">ありがとう</text>
+  </g>
+  <rect y="352" width="600" height="48" fill="#dfe5ef"/>
+  <use href="#pf" x="30" y="196" width="110" height="154" style="--skin:#f2c9a5;--hair:#1b2433;--cloth:#e5372b"/>
+  <use href="#pm" x="470" y="196" width="110" height="154" style="--skin:#b97a52;--hair:#1b2433;--cloth:#1c3a63"/>
+  <use href="#pm" x="135" y="176" width="115" height="161" style="--skin:#8d5a3a;--hair:#1b2433;--cloth:#0b2545"/>
+  <use href="#pf" x="350" y="176" width="115" height="161" style="--skin:#d9a077;--hair:#3a2a20;--cloth:#7d8aa0"/>
+  <use href="#pm" x="232" y="150" width="136" height="190" style="--skin:#f2c9a5;--hair:#3a2a20;--cloth:#e5372b"/>
+</svg>
