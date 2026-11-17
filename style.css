@@ -1573,3 +1573,66 @@ img { max-width: 100%; display: block; }
 .contact-people img { width: 72px; height: 72px; object-fit: cover; object-position: center 20%; border-radius: 50%; border: 2px solid #fff; }
 .contact-people figcaption { font-size: 0.88rem; line-height: 1.5; color: #fff; }
 .contact-people figcaption small { display: block; color: #c9d3e2; font-size: 0.75rem; }
+
+/* ===== 企業理念 ===== */
+.phil-top {
+  padding: 96px 0 92px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #0b2545 0%, #13315c 100%);
+}
+.phil-tag { margin: 0 0 28px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; color: #ff8a80; }
+.phil-tag span { margin-left: 14px; font-weight: 500; letter-spacing: 0.06em; color: #b9c6dc; }
+.phil-big {
+  margin: 0 0 28px;
+  font-family: "Noto Serif JP", "游明朝", serif;
+  font-weight: 700;
+  font-size: clamp(1.45rem, 6vw, 3.6rem);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+.phil-sub { margin: 0; text-wrap: balance; font-size: clamp(0.9rem, 2vw, 1.2rem); line-height: 2; color: #dfe6f1; letter-spacing: 0.06em; }
+
+.phil-flow { max-width: 900px; margin: 0 auto; }
+.phil-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 44px 0;
+  border-top: 1px solid #dfe5ee;
+}
+.phil-row:last-child { border-bottom: 1px solid #dfe5ee; }
+.phil-no { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.22em; color: var(--red); }
+.phil-name { margin: 6px 0 4px; font-size: 1.5rem; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; }
+.phil-cap { margin: 0; font-size: 0.85rem; color: var(--text-soft); }
+.phil-body p { margin: 0 0 6px; font-size: 1rem; line-height: 1.9; color: var(--text-soft); }
+.phil-body .phil-lead {
+  margin: 0 0 16px;
+  font-family: "Noto Serif JP", "游明朝", serif;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+}
+
+.phil-cap-inline { display: block; margin-top: 8px; font-size: 0.9rem; font-weight: 500; color: var(--text-soft); letter-spacing: 0.04em; }
+.phil-values { display: grid; gap: 18px; max-width: 900px; margin: 0 auto; }
+.phil-val { position: relative; padding: 28px 28px 26px 84px; background: #fff; border-radius: 12px; box-shadow: 0 2px 14px rgba(11, 37, 69, 0.07); }
+.phil-vno {
+  position: absolute; left: 26px; top: 24px;
+  font-family: "Noto Serif JP", "游明朝", serif;
+  font-size: 2rem; font-weight: 700; line-height: 1; color: var(--red);
+}
+.phil-val h3 { margin: 0 0 8px; font-size: 1.1rem; color: var(--navy); }
+.phil-val p { margin: 0; font-size: 0.95rem; line-height: 1.9; color: var(--text-soft); }
+@media (min-width: 780px) {
+  .phil-values { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 779px) {
+  .phil-top { padding: 64px 0 60px; }
+  .phil-tag span { display: block; margin: 6px 0 0; }
+  .phil-row { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
+  .phil-val { padding: 24px 20px 22px 70px; }
+  .phil-vno { left: 20px; top: 20px; font-size: 1.7rem; }
+}
