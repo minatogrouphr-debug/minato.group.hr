@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>受入れ・支援かんたん診断｜登録支援機関 MINATO</title>
+<meta name="description" content="外国人材の受入れ・支援の状況を、かんたんな質問で診断。気になる点と次の一歩をご案内します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
+    <nav class="nav" id="site-nav">
+      <div class="nav-item has-sub">
+        <a href="service.html">サービス内容</a>
+        <div class="nav-sub">
+          <a href="for-companies.html">受入れ企業様へ</a>
+        </div>
+      </div>
+      <a href="foreign-workers.html">外国人材について</a>
+      <a href="registered-support.html">登録支援機関</a>
+      <a href="flow.html">採用までの流れ</a>
+      <a href="news.html">お知らせ</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">経営理念</a>
+        </div>
+      </div>
+      <a href="materials.html" class="nav-mobile-only">お役立ち資料</a>
+      <a href="shindan.html" class="nav-sp-only">受入れ・支援かんたん診断</a>
+    </nav>
+    <div class="header-btns">
+      <a href="contact.html" class="btn btn-primary btn-nav">お問い合わせ</a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero-sub hero-photo hero-bay">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">DIAGNOSIS</p>
+      <h1>受入れ・支援かんたん診断</h1>
+      <p class="hero-lead">外国人材の受入れや支援の状況を、いっしょに見直してみませんか？<br>選ぶだけで、約1分。気をつけたい点と次の一歩がわかります。</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="quiz" id="quiz">
+
+        <div id="quiz-start" class="quiz-card">
+          <p class="quiz-lead">選ぶだけで、かんたん。</p>
+          <p class="quiz-note">個人情報の入力は不要です。結果はあくまで目安で、正式な受入れ可否の判断ではありません。</p>
+          <button type="button" class="btn btn-primary" id="quiz-go">診断をはじめる</button>
+        </div>
+
+        <div id="quiz-q" class="quiz-card" hidden>
+          <div class="quiz-progress"><span id="quiz-bar"></span></div>
+          <p class="quiz-count" id="quiz-count"></p>
+          <h2 class="quiz-q" id="quiz-title"></h2>
+          <div class="quiz-opts" id="quiz-opts"></div>
+          <button type="button" class="btn btn-primary quiz-next" id="quiz-next" hidden>次へ</button>
+          <button type="button" class="quiz-back" id="quiz-back">← 前の質問にもどる</button>
+        </div>
+
+        <div id="quiz-r" class="quiz-card" hidden>
+          <p class="quiz-count">診断結果</p>
+          <h2 class="quiz-rtitle" id="quiz-rtitle"></h2>
+          
+          <p class="quiz-rtext" id="quiz-rtext"></p>
+          <p class="quiz-picked" id="quiz-picked"></p>
+          <div id="quiz-todo-wrap">
+            <p class="quiz-sub">確認しておきたい点</p>
+            <ul class="quiz-todo" id="quiz-todo"></ul>
+          </div>
+          <div class="quiz-cta" id="quiz-cta"></div>
+          <p class="quiz-note">※この診断は目安です。在留資格の要件や基準は、分野や状況によって異なります。正式な判断は、出入国在留管理庁の案内や専門家へご確認ください。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-cta">
+    <div class="wrap">
+      <p class="section-label">お問い合わせ</p>
+      <h2 class="section-title">まずはお話をお聞かせください</h2>
+      <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-col ft-info">
+        <span class="logo logo-footer"><img src="logo-footer.png" alt="MINATO"></span>
+        <p>兵庫県神戸市長田区菅原通2丁目105-1 403</p>
+        <p><a href="tel:08061905084">080-6190-5084</a></p>
+        <p>受付時間：9:00〜17:00（平日のみ）</p>
+      </div>
+      <div class="ft-col ft-license">
+        <p class="ft-head">許可等</p>
+        <p>登録支援機関<br>登録番号 25登-011435</p>
+      </div>
+      <nav class="ft-col ft-nav" aria-label="フッターメニュー">
+        <ul>
+          <li><a href="service.html">サービス内容</a></li>
+          <li><a href="for-companies.html">受入れ企業様へ</a></li>
+          <li><a href="foreign-workers.html">外国人材について</a></li>
+          <li><a href="registered-support.html">登録支援機関</a></li>
+          <li><a href="flow.html">採用までの流れ</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="company.html">会社案内</a></li>
+          <li><a href="greeting.html">代表挨拶</a></li>
+          <li><a href="philosophy.html">経営理念</a></li>
+          <li><a href="materials.html">お役立ち資料</a></li>
+          <li><a href="shindan.html">受入れ・支援かんたん診断</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="ft-bottom">
+      <div class="footer-links">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var Q1 = { q: "外国人材を受け入れた経験はありますか？", o: [["現在、受け入れている", "yes"], ["過去に受け入れたことがある", "yes"], ["まだ受け入れたことがない", "no"]] };
+  var POINTS = ["費用", "サポートの内容", "対応の早さ", "言葉・コミュニケーション", "手続き・書類", "人材の質・マッチング", "定着（長く働いてくれるか）", "何から始めればよいか"];
+  var HAS = [
+    { id: "sat", q: "現在お付き合いのある管理団体・登録支援機関に、満足していますか？", o: [["満足している", "good"], ["どちらともいえない", "mid"], ["不満・不安がある", "bad"], ["委託していない（自社で行っている）", "none"]] },
+    { id: "fee", q: "月額の支援費用に、満足していますか？", o: [["満足している", "good"], ["どちらともいえない", "mid"], ["費用に見合う支援を受けられていない", "bad"], ["委託していない", "none"]] },
+    { id: "trouble", q: "今、雇用している外国人材のことで、困っていることはありますか？", o: [["特にない", "good"], ["小さな困りごとがある（言葉、生活、コミュニケーションなど）", "mid"], ["困っていることがある（離職、トラブル、相談できる人がいないなど）", "bad"]] },
+    { id: "points", q: "気になるポイントはありますか？（いくつでも選べます）", multi: true },
+    { id: "want", q: "ご相談や資料について、いかがですか？", o: [["相談したい（無料）", "consult"], ["資料がほしい", "doc"], ["今は必要ない", "none"]] }
+  ];
+  var NO = [
+    { id: "field", q: "受け入れたい仕事は、特定技能の対象分野に当てはまりますか？", o: [["当てはまる", "good"], ["わからない", "mid"], ["当てはまらないと思う", "bad"]] },
+    { id: "when", q: "いつごろ、受け入れたいですか？", o: [["3か月以内", "soon"], ["半年〜1年以内", "later"], ["まだ決めていない", "undecided"]] },
+    { id: "points", q: "気になるポイントはありますか？（いくつでも選べます）", multi: true },
+    { id: "want", q: "ご相談や資料について、いかがですか？", o: [["相談したい（無料）", "consult"], ["資料がほしい", "doc"], ["今は必要ない", "none"]] }
+  ];
+  var list, idx, ans, flow, picked;
+  var $ = function (id) { return document.getElementById(id); };
+  function show(id) { ["quiz-start", "quiz-q", "quiz-r"].forEach(function (x) { $(x).hidden = (x !== id); }); }
+  function total() { return 1 + (flow === "yes" ? HAS.length : flow === "no" ? NO.length : 4); }
+  function render() {
+    var d = idx === 0 ? Q1 : list[idx - 1];
+    $("quiz-count").textContent = "質問 " + (idx + 1) + " / " + total();
+    $("quiz-bar").style.width = ((idx + 1) / total() * 100) + "%";
+    $("quiz-title").textContent = d.q;
+    var box = $("quiz-opts"); box.innerHTML = "";
+    $("quiz-next").hidden = !d.multi;
+    if (d.multi) {
+      var sel = ans[d.id] || [];
+      POINTS.concat(["特にない"]).forEach(function (p) {
+        var b = document.createElement("button"); b.type = "button"; b.className = "quiz-opt" + (sel.indexOf(p) > -1 ? " is-on" : ""); b.textContent = p;
+        b.onclick = function () {
+          var s = ans[d.id] || [];
+          if (p === "特にない") { s = s.indexOf(p) > -1 ? [] : [p]; }
+          else { s = s.filter(function (x) { return x !== "特にない"; }); var k = s.indexOf(p); if (k > -1) s.splice(k, 1); else s.push(p); }
+          ans[d.id] = s; render();
+        };
+        box.appendChild(b);
+      });
+    } else {
+      d.o.forEach(function (op) {
+        var b = document.createElement("button"); b.type = "button"; b.className = "quiz-opt"; b.textContent = op[0];
+        b.onclick = function () {
+          if (idx === 0) { flow = op[1]; list = flow === "yes" ? HAS : NO; ans = {}; }
+          else { ans[d.id] = op[1]; }
+          next();
+        };
+        box.appendChild(b);
+      });
+    }
+    $("quiz-back").style.visibility = idx === 0 ? "hidden" : "visible";
+  }
+  function next() { if (idx < list.length) { idx++; render(); } else { result(); } }
+  function link(href, text, ghost) { var a = document.createElement("a"); a.href = href; a.className = ghost ? "quiz-link" : "btn btn-primary"; a.textContent = text; return a; }
+  function result() {
+    var t, x, todos = [], cta = $("quiz-cta"); cta.innerHTML = "";
+    var pts = (ans.points || []).filter(function (p) { return p !== "特にない"; });
+    if (flow === "yes") {
+      if (ans.sat === "good") {
+        t = "いい登録支援機関様と、お付き合いされているようです";
+        x = "現在の管理団体・登録支援機関にご満足いただけているとのこと、何よりです。今後、管理団体・登録支援機関の見直しなどお困りごとがございましたら、ぜひ登録支援機関MINATOまでご連絡ください。その際に備えて、資料をダウンロードいただけますと幸いです。";
+      } else if (ans.sat === "none") {
+        t = "自社での支援、おつかれさまです";
+        x = "支援を自社で行うのは、手間も責任も大きいものです。登録支援機関に任せることで、負担を軽くできる場合があります。比べてみたいときは、ご相談ください。ご相談は無料です。";
+      } else {
+        t = "見直しのお手伝いができるかもしれません";
+        x = "現在の管理団体・登録支援機関について、見直しが必要かどうか、MINATOがお手伝いします。ご相談は無料です。今の契約や支援の内容を、いっしょに整理してみませんか。";
+      }
+      if (ans.sat !== "good") {
+        if (ans.fee === "bad") todos.push("月額の支援費用が、内容に見合っているか、見直す余地があるかもしれません。支援の内容と費用は、他と比べてみると見えてきます。");
+        if (ans.trouble === "bad" || ans.trouble === "mid") todos.push("今の困りごとは、早めに整理すると解決しやすくなります。言葉、生活、人間関係などは、第三者が間に入ると進むこともあります。");
+      }
+    } else {
+      if (ans.field === "good") { t = "受入れに向けて、準備を進めましょう"; x = "対象分野に当てはまるとのことで、受入れの準備を進められる状況です。必要な書類や、進め方をいっしょに整理しましょう。ご相談は無料です。"; }
+      else { t = "まずは、状況の整理から始めましょう"; x = "受入れの前に、確認しておきたい点があります。何から進めればよいか、いっしょに整理しましょう。ご相談は無料です。"; }
+      if (ans.field !== "good") todos.push("特定技能の対象は、介護・ビルクリーニング・外食・建設など、決められた分野です。まずは貴社の仕事が対象かを確認しましょう。");
+    }
+    $("quiz-rtitle").textContent = t;
+    $("quiz-rtext").textContent = x;
+    $("quiz-picked").textContent = pts.length ? "気になるポイント：" + pts.join("、") : "";
+    $("quiz-picked").hidden = !pts.length;
+    var ul = $("quiz-todo"); ul.innerHTML = "";
+    todos.forEach(function (s) { var li = document.createElement("li"); li.textContent = s; ul.appendChild(li); });
+    $("quiz-todo-wrap").hidden = todos.length === 0;
+    var want = ans.want;
+    if (want === "doc") { cta.appendChild(link("materials.html", "資料をダウンロードする")); cta.appendChild(link("contact.html", "相談もしてみる（無料）", true)); }
+    else if (want === "consult") { cta.appendChild(link("contact.html", "MINATOに無料で相談する")); cta.appendChild(link("materials.html", "資料もダウンロードする", true)); }
+    else { cta.appendChild(link("materials.html", "資料をダウンロードする", true)); cta.appendChild(link("contact.html", "相談してみる（無料）", true)); }
+    var retry = document.createElement("button"); retry.type = "button"; retry.className = "quiz-back"; retry.textContent = "もう一度診断する";
+    retry.onclick = function () { show("quiz-start"); }; cta.appendChild(retry);
+    show("quiz-r"); window.scrollTo({ top: $("quiz").offsetTop - 80, behavior: "smooth" });
+  }
+  $("quiz-go").onclick = function () { idx = 0; ans = {}; flow = null; list = []; show("quiz-q"); render(); };
+  $("quiz-next").onclick = function () { next(); };
+  $("quiz-back").onclick = function () { if (idx > 0) { idx--; render(); } };
+})();
+</script>
+<script src="menu.js"></script>
+</body>
+</html>

@@ -34,6 +34,7 @@
         </div>
       </div>
       <a href="materials.html" class="nav-mobile-only">お役立ち資料</a>
+      <a href="shindan.html" class="nav-sp-only">受入れ・支援かんたん診断</a>
     </nav>
     <div class="header-btns">
       <a href="contact.html" class="btn btn-primary btn-nav">お問い合わせ</a>
@@ -52,12 +53,17 @@
         外国人材の採用支援から、就労・生活・定着まで。<br>
         企業にとっても、外国人材にとっても「続けたい」と思える関係づくりを、確かな実績で支えます。
       </p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
-        <a href="https://www.instagram.com/minato.group.hr/" class="btn btn-ghost" target="_blank" rel="noopener">Instagramを見る</a>
-      </div>
+      
     </div>
   </section>
+
+  <div class="news-bar" aria-label="最新のお知らせ">
+    <div class="wrap news-bar-inner">
+      <span class="news-bar-label">NEWS</span>
+      <a href="news.html" class="news-bar-link" id="news-bar-link"><time id="news-bar-date"></time><span id="news-bar-title">最新のお知らせを見る</span></a>
+      <a href="news.html" class="news-bar-more">お知らせ一覧 &rarr;</a>
+    </div>
+  </div>
 
   <section class="stats" aria-label="実績">
     <div class="wrap stats-grid">
@@ -96,7 +102,6 @@
             結果として、受入れ後のミスマッチや早期離職を防ぎ、
             長く働き続けられる関係につながると考えています。
           </p>
-          <p><a href="company.html">会社案内・メンバー紹介を見る &rarr;</a></p>
         </div>
         <div class="about-card">
           <div class="about-card-item">
@@ -154,16 +159,7 @@
     </div>
   </section>
 
-  <section class="section section-alt" id="news">
-    <div class="wrap">
-      <p class="section-label">お知らせ</p>
-      <h2 class="section-title">最新のお知らせ</h2>
-      <ul class="news-list news-top" id="news-top-list"></ul>
-      <p class="news-top-more"><a href="news.html">お知らせ一覧を見る &rarr;</a></p>
-    </div>
-  </section>
-
-  <section id="contact" class="section section-contact contact-photo">
+<section id="contact" class="section section-contact contact-photo">
     <div class="wrap contact-inner">
       <p class="section-label">お問い合わせ</p>
       <h2 class="section-title">まずはお話をお聞かせください</h2>
@@ -180,38 +176,53 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <span class="logo logo-footer"><img src="logo-footer.png" alt="MINATO"></span>
-    <div class="footer-links">
-      <a href="privacy.html">プライバシーポリシー</a>
-      <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-col ft-info">
+        <span class="logo logo-footer"><img src="logo-footer.png" alt="MINATO"></span>
+        <p>兵庫県神戸市長田区菅原通2丁目105-1 403</p>
+        <p><a href="tel:08061905084">080-6190-5084</a></p>
+        <p>受付時間：9:00〜17:00（平日のみ）</p>
+      </div>
+      <div class="ft-col ft-license">
+        <p class="ft-head">許可等</p>
+        <p>登録支援機関<br>登録番号 25登-011435</p>
+      </div>
+      <nav class="ft-col ft-nav" aria-label="フッターメニュー">
+        <ul>
+          <li><a href="service.html">サービス内容</a></li>
+          <li><a href="for-companies.html">受入れ企業様へ</a></li>
+          <li><a href="foreign-workers.html">外国人材について</a></li>
+          <li><a href="registered-support.html">登録支援機関</a></li>
+          <li><a href="flow.html">採用までの流れ</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="company.html">会社案内</a></li>
+          <li><a href="greeting.html">代表挨拶</a></li>
+          <li><a href="philosophy.html">経営理念</a></li>
+          <li><a href="materials.html">お役立ち資料</a></li>
+          <li><a href="shindan.html">受入れ・支援かんたん診断</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
-    <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
+    <div class="ft-bottom">
+      <div class="footer-links">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
+    </div>
   </div>
 </footer>
 
 <script src="news.js" charset="utf-8"></script>
 <script>
 (function () {
-  var list = document.getElementById("news-top-list");
-  if (!list || typeof NEWS === "undefined") return;
-  NEWS.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 3).forEach(function (n) {
-    var li = document.createElement("li");
-    li.className = "news-item";
-    var meta = document.createElement("div");
-    meta.className = "news-meta";
-    var d = document.createElement("time");
-    d.textContent = n.date.replace(/-/g, ".");
-    var c = document.createElement("span");
-    c.className = "news-cat";
-    c.textContent = n.category || "お知らせ";
-    meta.appendChild(d); meta.appendChild(c);
-    var h = document.createElement("h3");
-    h.className = "news-title";
-    h.textContent = n.title;
-    li.appendChild(meta); li.appendChild(h);
-    list.appendChild(li);
-  });
+  if (typeof NEWS !== "undefined" && NEWS.length) {
+    var latest = NEWS.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; })[0];
+    document.getElementById("news-bar-date").textContent = latest.date.replace(/-/g, ".");
+    document.getElementById("news-bar-title").textContent = latest.title;
+  }
 })();
 </script>
 
