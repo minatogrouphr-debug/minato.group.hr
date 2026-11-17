@@ -1712,3 +1712,20 @@ img { max-width: 100%; display: block; }
   .nd-service { flex-direction: column; align-items: flex-start; }
   .nd-service img { width: 170px; align-self: center; }
 }
+/* ===== スマホ向けの文字の調整（読みやすさ） ===== */
+h1, h2, h3 { line-break: strict; text-wrap: balance; }
+p, li, dd { line-break: strict; text-wrap: pretty; }
+@media (max-width: 779px) {
+  body { line-height: 1.85; }
+  .hero h1 { font-size: clamp(1.5rem, 6.6vw, 1.95rem); letter-spacing: 0.02em; max-width: none; line-height: 1.55; }
+  .hero-lead { font-size: 0.92rem; letter-spacing: 0; }
+  .eyebrow { letter-spacing: 0.14em; }
+  .section-title { font-size: 1.3rem; letter-spacing: 0.02em; max-width: none; }
+  .philosophy-main, .phil-lead, .quiz-q, .quiz-rtitle { letter-spacing: 0.02em; }
+  .phil-big { letter-spacing: 0.04em; }
+  .stat-label, .stat p { letter-spacing: 0; }
+}
+@media (max-width: 779px) {
+  .hero h1 { word-break: keep-all; overflow-wrap: anywhere; }
+}
+.phil-big, .phil-sub, .phil-lead, .phil-body p { word-break: keep-all; overflow-wrap: anywhere; }
