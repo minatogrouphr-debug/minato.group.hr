@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お知らせ｜登録支援機関 MINATO</title>
+<meta name="description" content="登録支援機関MINATOからのお知らせ。毎月の更新情報や、外国人材の受入れに役立つ情報を掲載しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="logo.png" alt="MINATO"></a>
+    <nav class="nav" id="site-nav">
+      <div class="nav-item has-sub">
+        <a href="service.html">サービス内容</a>
+        <div class="nav-sub">
+          <a href="for-companies.html">受入れ企業様へ</a>
+        </div>
+      </div>
+      <a href="foreign-workers.html">外国人材について</a>
+      <a href="registered-support.html">登録支援機関</a>
+      <a href="flow.html">採用までの流れ</a>
+      <a href="news.html" class="current">お知らせ</a>
+      <div class="nav-item has-sub">
+        <a href="company.html">会社案内</a>
+        <div class="nav-sub">
+          <a href="greeting.html">代表挨拶</a>
+          <a href="philosophy.html">経営理念</a>
+        </div>
+      </div>
+      <a href="materials.html" class="nav-mobile-only">お役立ち資料</a>
+      <a href="shindan.html" class="nav-sp-only">受入れ・支援かんたん診断</a>
+    </nav>
+    <div class="header-btns">
+      <a href="contact.html" class="btn btn-primary btn-nav">お問い合わせ</a>
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero-sub hero-photo hero-city">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">NEWS</p>
+      <h1>お知らせ</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <article class="news-detail" id="news-detail" hidden>
+        <div class="news-meta"><time id="nd-date"></time><span class="news-cat" id="nd-cat"></span></div>
+        <h2 class="news-title" id="nd-title"></h2>
+        <img id="nd-img" alt="" hidden>
+        <div id="nd-body"></div>
+        <p id="nd-linkwrap" hidden><a id="nd-link" class="btn btn-primary" target="_blank" rel="noopener"></a></p>
+      </article>
+      <p class="news-empty" id="nd-empty" hidden>お探しのお知らせが見つかりませんでした。</p>
+      <p style="margin-top:36px;"><a href="news.html" class="news-link">← お知らせ一覧にもどる</a></p>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-col ft-info">
+        <span class="logo logo-footer"><img src="logo-footer.png" alt="MINATO"></span>
+        <p>兵庫県神戸市長田区菅原通2丁目105-1 403</p>
+        <p><a href="tel:08061905084">080-6190-5084</a></p>
+        <p>受付時間：9:00〜17:00（平日のみ）</p>
+      </div>
+      <div class="ft-col ft-license">
+        <p class="ft-head">許可等</p>
+        <p>登録支援機関<br>登録番号 25登-011435</p>
+      </div>
+      <nav class="ft-col ft-nav" aria-label="フッターメニュー">
+        <ul>
+          <li><a href="service.html">サービス内容</a></li>
+          <li><a href="for-companies.html">受入れ企業様へ</a></li>
+          <li><a href="foreign-workers.html">外国人材について</a></li>
+          <li><a href="registered-support.html">登録支援機関</a></li>
+          <li><a href="flow.html">採用までの流れ</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="company.html">会社案内</a></li>
+          <li><a href="greeting.html">代表挨拶</a></li>
+          <li><a href="philosophy.html">経営理念</a></li>
+          <li><a href="materials.html">お役立ち資料</a></li>
+          <li><a href="shindan.html">受入れ・支援かんたん診断</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="ft-bottom">
+      <div class="footer-links">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="https://www.instagram.com/minato.group.hr/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="copyright">&copy; 2026 登録支援機関 MINATO</p>
+    </div>
+  </div>
+</footer>
+<script src="news.js" charset="utf-8"></script>
+<script>
+(function () {
+  var id = new URLSearchParams(location.search).get("id");
+  var n = (typeof NEWS !== "undefined" ? NEWS : []).filter(function (x) { return x.id === id; })[0];
+  var $ = function (i) { return document.getElementById(i); };
+  if (!n) { $("nd-empty").hidden = false; return; }
+  document.title = n.title + "｜登録支援機関 MINATO";
+  $("nd-date").textContent = n.date.replace(/-/g, ".");
+  $("nd-cat").textContent = n.category || "お知らせ";
+  $("nd-title").textContent = n.title;
+  if (n.image) { $("nd-img").src = n.image; $("nd-img").alt = n.imageAlt || n.title; $("nd-img").hidden = false; }
+  var paras = n.detail && n.detail.length ? n.detail : [n.body];
+  paras.forEach(function (t) {
+    if (typeof t === "string") { var p = document.createElement("p"); p.className = "news-body"; p.textContent = t; $("nd-body").appendChild(p); return; }
+    var box = document.createElement("div"); box.className = "nd-service";
+    if (t.image) { var im = document.createElement("img"); im.src = t.image; im.alt = t.imageAlt || ""; im.loading = "lazy"; box.appendChild(im); }
+    var tx = document.createElement("div"); tx.className = "nd-service-text";
+    if (t.heading) { var h = document.createElement("h3"); h.textContent = t.heading; tx.appendChild(h); }
+    if (t.text) { var q = document.createElement("p"); q.textContent = t.text; tx.appendChild(q); }
+    if (t.list) { var ul = document.createElement("ul"); t.list.forEach(function (s) { var li = document.createElement("li"); li.textContent = s; ul.appendChild(li); }); tx.appendChild(ul); }
+    box.appendChild(tx); $("nd-body").appendChild(box);
+  });
+  if (n.link) { $("nd-link").href = n.link; $("nd-link").textContent = (n.linkText || "詳しく見る") + " →"; $("nd-linkwrap").hidden = false; }
+  $("news-detail").hidden = false;
+})();
+</script>
+
+<script src="menu.js"></script>
+</body>
+</html>

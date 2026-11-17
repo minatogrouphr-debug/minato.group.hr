@@ -137,13 +137,11 @@
     li.appendChild(h);
     li.appendChild(p);
 
-    if (n.link) {
-      var a = document.createElement("a");
-      a.className = "news-link";
-      a.href = n.link;
-      a.textContent = "詳しく見る →";
-      li.appendChild(a);
-    }
+    var a = document.createElement("a");
+    a.className = "news-link";
+    a.href = "news-detail.html?id=" + encodeURIComponent(n.id);
+    a.textContent = "詳しく見る →";
+    li.appendChild(a);
     list.appendChild(li);
   });
 })();
