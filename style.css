@@ -1729,3 +1729,84 @@ p, li, dd { line-break: strict; text-wrap: pretty; }
   .hero h1 { word-break: keep-all; overflow-wrap: anywhere; }
 }
 .phil-big, .phil-sub, .phil-lead, .phil-body p { word-break: keep-all; overflow-wrap: anywhere; }
+/* ===== トップページ：リンクカード ===== */
+.top-lead { max-width: 62ch; margin: 0 0 28px; color: var(--text-soft); line-height: 2; }
+.top-reg { display: inline-block; margin-left: 8px; padding: 2px 12px; font-size: 0.85rem; font-weight: 700; color: var(--navy); background: #fff; border: 1px solid #d5dce8; border-radius: 4px; }
+.top-links { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 22px 0 0; }
+.top-links a { font-weight: 700; color: var(--navy); text-decoration: none; border-bottom: 2px solid var(--red); padding-bottom: 2px; }
+.link-cards { display: grid; gap: 16px; }
+.link-card { display: block; padding: 24px 24px 22px; background: #fff; border-radius: 10px; border-top: 3px solid var(--navy); box-shadow: 0 2px 14px rgba(11, 37, 69, 0.07); text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
+.link-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(11, 37, 69, 0.12); }
+.link-card strong { display: block; margin-bottom: 6px; font-size: 1.05rem; color: var(--navy); }
+.link-card strong::after { content: " \2192"; color: var(--red); }
+.link-card span { display: block; font-size: 0.88rem; line-height: 1.8; color: var(--text-soft); }
+@media (min-width: 780px) {
+  .link-cards { grid-template-columns: repeat(3, 1fr); }
+  .link-cards-4 { grid-template-columns: repeat(4, 1fr); }
+}
+/* トップページの見出し：途中で折れないように */
+#about .section-title, #companies .section-title, #registered .section-title, main > section:not([id]) .section-title { max-width: none; word-break: keep-all; overflow-wrap: anywhere; }
+.about-card-item .label { word-break: keep-all; overflow-wrap: anywhere; }
+/* ===== スマホ表示：余白をつめる（最後に書いて優先させる） ===== */
+@media (max-width: 779px) {
+  .wrap { padding: 0 18px; }
+
+  .header-inner { height: 58px; }
+  .logo img { height: 46px; }
+
+  section.hero,
+  section.hero.hero-photo { padding: 60px 0 52px; }
+  section.hero.hero-sub,
+  section.hero.hero-sub.hero-photo { padding: 40px 0 36px; }
+  .hero h1 { font-size: clamp(1.6rem, 7vw, 2rem); line-height: 1.5; margin-bottom: 16px; }
+  .hero-lead { font-size: 0.95rem; margin-bottom: 26px; }
+  .hero-sub .hero-lead { margin-bottom: 0; }
+  .eyebrow { margin-bottom: 16px; }
+  .hero-cta { gap: 10px; }
+
+  .stat { padding: 22px 10px; }
+  .stat-num { font-size: 1.9rem; }
+  .stat-num.stat-text { font-size: 1.2rem; }
+  .stat-label { font-size: 0.78rem; }
+
+  .section { padding: 52px 0; }
+  .section-title { font-size: 1.4rem; line-height: 1.5; margin-bottom: 26px; }
+  .section-label { margin-bottom: 10px; }
+  .section-lead { margin-bottom: 22px; }
+  .page-cta .btn { margin-top: 0; }
+
+  .feature, .timeline li, .visa-card, .cost-box { padding: 18px 16px; }
+  .feature-list, .timeline, .support-list, .visa-cards { gap: 12px; }
+  .timeline li { margin-bottom: 14px; }
+  .benefit, .num-card, .check-list li { padding: 14px 16px; }
+  .check-list li { padding-left: 50px; }
+  .support-list li { padding: 14px 14px; }
+  .support-phase { margin-bottom: 20px; }
+  .reg-banner { margin-top: 22px; padding: 20px 14px; }
+  .lang-frame { padding: 12px; }
+  .lang-box { padding: 22px 14px; }
+  .lang-text { margin-bottom: 20px; }
+  .intro-2col { gap: 20px; }
+  .compare th, .compare td { padding: 10px 12px; }
+  .form { padding: 22px 16px; }
+
+  .site-footer { padding: 30px 0; }
+  .logo-footer img { height: 64px; }
+  .footer-inner { gap: 12px; }
+}
+/* スマホ：実績の4つを、横1列にコンパクトに */
+@media (max-width: 779px) {
+  .stats-grid { grid-template-columns: repeat(4, 1fr); }
+  .stat,
+  .stat:nth-child(2n),
+  .stat:nth-last-child(-n+2) {
+    padding: 14px 3px;
+    border-right: 1px solid var(--border);
+    border-bottom: none;
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-size: 1.4rem; line-height: 1.2; margin-bottom: 5px; }
+  .stat-num span { display: block; margin: 2px 0 0; font-size: 0.5em; line-height: 1.2; }
+  .stat-num.stat-text { font-size: 0.8rem; line-height: 1.35; padding: 0; margin-bottom: 5px; }
+  .stat-label { font-size: 0.6rem; line-height: 1.4; letter-spacing: 0; }
+}
